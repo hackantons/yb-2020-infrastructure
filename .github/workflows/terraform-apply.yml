@@ -44,3 +44,4 @@ jobs:
         uses: rtCamp/action-slack-notify@master
         env: 
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
+          SLACK_TITLE: Infrastructure Apply
