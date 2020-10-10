@@ -34,7 +34,8 @@ resource "aws_iam_policy" "task_ybhackathon" {
 data "aws_iam_policy_document" "task" {
   statement {
     effect    = "Allow"
-    resources = [
+    resources = ["*"]
+    actions = [
       "ecr:GetAuthorizationToken",
       "ecr:BatchCheckLayerAvailability",
       "ecr:GetDownloadUrlForLayer",
@@ -42,7 +43,6 @@ data "aws_iam_policy_document" "task" {
       "logs:CreateLogStream",
       "logs:PutLogEvents"
     ]
-    actions = ["*"]
   }
 }
 
