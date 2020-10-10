@@ -13,3 +13,11 @@ resource "aws_route53_record" "bekb_dev" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_record" "blockchain_bekb_dev" {
+  zone_id = aws_route53_zone.bekb_dev.zone_id
+  name    = "blockchain.bekb.dev"
+  type    = "A"
+  
+  records = ["18.192.192.22"]
+}
